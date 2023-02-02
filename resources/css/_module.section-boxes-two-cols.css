@@ -1,0 +1,28 @@
+/* ------------------------------------------------------------ *\
+	Section Boxes Two Cols
+\* ------------------------------------------------------------ */
+
+.section-boxes-two-cols { padding: 65px 0 0; }
+.section-boxes-two-cols + .section-boxes-two-cols { padding-top: 52px; }
+.section-boxes-two-cols h2 { font-size: 42px; font-family: 'League Spartan'; font-weight: 700; text-align: center; margin-top: 0; padding-top: 0; margin-bottom: 35px; }
+
+.section-boxes-two-cols .section__boxes { display: flex; flex-wrap: wrap; justify-content: space-between; max-width: 1080px; margin: 0 auto; }
+.section-boxes-two-cols .section__boxes .box-entry { max-width: 49.5%; flex: 1 1 49.5%; }
+.section-boxes-two-cols .section__boxes .box-entry .box__image { min-height: 288px; background-size: cover; background-position: center; background-repeat: no-repeat; }
+
+.section-boxes-two-cols .box-entry { background-color: #f8f8f8; margin-bottom: 30px; }
+.section-boxes-two-cols .box__content { text-align: center; padding: 20px 35px 55px; }
+.section-boxes-two-cols .box__content h3 { font-size: 24px; font-family: 'League Spartan'; margin-bottom: 15px; }
+.section-boxes-two-cols .box__content p { font-size: 16px; line-height: 1.32; margin-bottom: 35px; }
+.section-boxes-two-cols .box__content .link-more { z-index: 10; }
+.section-boxes-two-cols .box__content .link-more:hover { color: #75baa0; }
+
+$breakpoint-mobile {
+	.section-boxes-two-cols { padding: 35px 0; }
+	.section-boxes-two-cols .shell { padding: 0; }
+	.section-boxes-two-cols .section__boxes { display: block; }
+	.section-boxes-two-cols .section__boxes .box-entry { max-width: 100%; margin-bottom: 0; }
+
+	.section-boxes-two-cols + .section-boxes-two-cols { padding-top: 0; }
+	.section-boxes-two-cols h2 { max-width: 300px; margin: 0 auto 30px; font-size: 35px; }
+}

@@ -1,0 +1,21 @@
+/* ------------------------------------------------------------ *\
+	Title	
+\* ------------------------------------------------------------ */
+
+.title { letter-spacing: 0.008em; padding-bottom: 25px; }
+
+/* Title Line */
+
+.title--line { padding-bottom: 35px; position: relative; }
+.title--line:after { position: absolute; content: ''; width: 278px; height: 3px; background: $c-base; left: 50%; bottom: 0; transform: translateX(-50%); display: block; }
+
+/* ------------------------------------------------------------ *\
+	Responsive
+\* ------------------------------------------------------------ */
+
+/* Tablet Portrait */
+
+$breakpoint-tablet-portrait {
+	.title,
+	.title--line { padding-bottom: 20px; }
+}

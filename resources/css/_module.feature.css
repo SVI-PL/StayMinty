@@ -1,0 +1,26 @@
+/* ------------------------------------------------------------ *\
+	Feature
+\* ------------------------------------------------------------ */
+
+.feature .feature__image { display: flex; justify-content: center; margin-bottom: 17px; }
+.feature .feature__image img { height: 95px; }
+
+.feature .feature__body { text-align: center; font-size: 26px; margin: 0 auto; max-width: 60%; line-height: 1; }
+.feature h6 { text-transform: uppercase; color: $c-green; font-weight: 700; margin-bottom: 4px; }
+.feature p { font-weight: 400; letter-spacing: 0.038em; }
+
+/* ------------------------------------------------------------ *\
+	Responsive
+\* ------------------------------------------------------------ */
+
+/* Tablet Portrait */
+
+$breakpoint-tablet-portrait {
+	.feature .feature__body { font-size: 20px; }
+}
+
+/* Mobile Portrait */
+
+$breakpoint-mobile-portrait {
+	.feature .feature__image { margin-bottom: 10px; }
+}

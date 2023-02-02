@@ -1,0 +1,42 @@
+/* ------------------------------------------------------------ *\
+	Main - Default
+\* ------------------------------------------------------------ */
+
+.main--default { margin-top: 131px; padding: 60px 0; }
+
+.main--default-inner { display: flex; justify-content: space-between; }
+
+.main--default .content { position: relative; width: 65%; padding-right: 20px; }
+
+.main--default .sidebar { width: 35%; }
+.main--default .sidebar h2 { font-size: 28px; }
+
+.main--default .post { display: block; }
+
+.main--default .post + .post { margin-top: 15px; }
+
+.main--default .article__meta { font-weight: 600; padding: 4px 0; }
+.main--default .article__entry { padding-top: 20px; }
+
+/* Mobile */
+
+$breakpoint-mobile {
+	.main--default { margin-top: 95px; padding-top: 45px; }
+
+	.main--default-inner { display: block; }
+	.main--default .content,
+	.main--default .sidebar { width: 100%; }
+}
+
+@media(max-width: 650px){
+	.main--default { margin-top: 76px; padding-top: 35px; }
+}
+
+/* ------------------------------------------------------------ *\
+	Default Template
+\* ------------------------------------------------------------ */
+
+.main--default-template {  }
+.main--default-template ul,
+.main--default-template ol { margin-left: 25px; }
+.main--default-template blockquote { border-left: 5px solid #75baa0; padding-left: 30px; font-style: italic; }

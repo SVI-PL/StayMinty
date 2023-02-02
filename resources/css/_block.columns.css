@@ -1,0 +1,22 @@
+/* ------------------------------------------------------------ *\
+	Gutenber Block - Columns
+\* ------------------------------------------------------------ */
+
+.wp-block-columns.alignfull { padding-left: 16px; padding-right: 16px; }
+
+$breakpoint-mobile {
+	.wp-block-columns {
+		flex-wrap: nowrap;
+	}
+}
+
+$breakpoint-tablet-portrait {
+	.wp-block-columns .wp-block-column > *:first-child { margin-top: 0; }
+	.wp-block-columns .wp-block-column > *:last-child { margin-bottom: 0; }
+
+	.wp-block-columns[class*='has-'] > * { margin-right: 16px; }
+	.wp-block-columns[class*='has-'] > *:last-child { margin-right: 0; }
+
+	.wp-block-columns.alignfull,
+	.wp-block-columns.alignfull .wp-block-column { padding-left: 32px; padding-right: 32px; }
+}

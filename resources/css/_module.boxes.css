@@ -1,0 +1,126 @@
+/* ------------------------------------------------------------ *\
+	Boxes
+\* ------------------------------------------------------------ */
+
+.boxes { margin-bottom: 78px; }
+.boxes > ul { display: flex; flex-wrap: wrap; }
+.boxes > ul > li { width: 50%; }
+
+/*boxes--alt*/
+.boxes--alt { padding: 0 45px; margin-bottom: 0; }
+.boxes--alt > ul { margin: -14px; }
+.boxes--alt > ul > li { width: 33.33334%; padding: 14px; }
+
+/* ------------------------------------------------------------ *\
+	Responsive
+\* ------------------------------------------------------------ */
+
+/* Mobile */
+
+$breakpoint-mobile {
+	.boxes { margin-bottom: 45px; }
+	.boxes > ul > li { width: 100%; }	
+	
+	.boxes--alt { padding: 0 25px; }
+	.boxes--alt > ul > li { width: 50%; }
+}
+
+@media(max-width: 560px){
+	.boxes--alt { padding: 0 15px; }
+	.boxes--alt > ul > li { width: 100%; }
+}
+
+/* ------------------------------------------------------------ *\
+	Box Primary
+\* ------------------------------------------------------------ */
+
+.box-primary { position: relative; background-color: $c-green-2; }
+.box-primary:after { content: ''; position: absolute; position: absolute; bottom: 48px; left: -20px; width: 80%; max-width: 358px; height: 7px; background-color: $c-green-2; }
+.box-primary h2 { position: absolute; top: 50%; transform: translateY(-50%); padding-left: 93px; padding-right: 10px; margin-top: 0; z-index: 10; color: $c-white; font-size: 52px; line-height: 1.32; font-family: $f-league; }
+
+.box-primary .box__meta { position: absolute; top: 100%; right: -18px; font-style: italic; font-size: 23px; line-height: 1; color: #fff; font-family: $f-libre; letter-spacing: 0.02em; }
+
+.box-primary .box__image { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-repeat: no-repeat; background-size: cover; background-position: center; }
+.box-primary .box__image:after { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(97, 97, 97, 0.51); transition: .3s background; }
+
+.box-primary .box__inner { position: relative; padding-bottom: 100%; }
+
+.box-primary .box__link { position: absolute; left: 0; top: 0; width: 100%; height: 100%; z-index: 25; }
+
+.box-primary:hover .box__image:after { background-color: rgba(97, 97, 97, 0.8); }
+
+/*box-primary--alt*/
+.box-primary--alt { padding: 92px; }
+.box-primary--alt:after { content: none; }
+.box-primary--alt h2 { top: auto; bottom: 0; transform: translateY(0); padding-left: 34px; margin-bottom: 73px; font-size: 40px; letter-spacing: 0.01em; }
+
+/* ------------------------------------------------------------ *\
+	Responsive
+\* ------------------------------------------------------------ */
+
+/* Small Desktop */
+
+$breakpoint-small-desktop {
+	.box-primary h2 { padding-left: 42px; font-size: 40px; }
+
+	.box-primary .box__meta { margin-top: 10px; }
+
+	.box-primary--alt { padding: 42px; }
+	.box-primary--alt h2 { font-size: 38px; margin-bottom: 50px; }
+}
+
+/* Tablet Portrait */
+
+$breakpoint-tablet-portrait {
+	.box-primary h2 { padding-left: 25px; font-size: 32px; }
+
+	.box-primary .box__meta { right: -10px; margin-top: 5px; font-size: 16px; }
+
+	.box-primary--alt { padding: 25px; }
+	.box-primary--alt h2 { font-size: 30px; }	
+	.box-primary--alt h2 { margin-bottom: 30px; }
+}
+
+@media(max-width: 560px){
+	.box-primary .box__inner { min-height: 400px; }
+
+	.box-primary--alt h2 { padding-left: 15px; margin-bottom: 15px; }
+}
+
+/* ------------------------------------------------------------ *\
+	Box
+\* ------------------------------------------------------------ */
+
+.box { text-align: center; }
+.box h2 { max-width: 270px; margin: 0 auto; z-index: 10; font-size: 36px; line-height: 1.31; line-height: 1.32; font-family: $f-league; }
+.box h2 a { text-decoration: none; }
+
+.box .box__image { position: relative; margin-bottom: 35px; padding-bottom: 106%; background-repeat: no-repeat; background-size: cover; background-position: center; background-color: $c-green-2; }
+.box .box__image:after { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; background-color: #616161; transition: .3s opacity; }
+.box .box__meta { margin: 0 0 24px; font-style: italic; font-family: $f-libre; letter-spacing: 0.02em; font-size: 20px; }
+
+.box:hover .box__image:after { opacity: .51 }
+
+/* ------------------------------------------------------------ *\
+	Responsive
+\* ------------------------------------------------------------ */
+
+/* Tablet Portrait */
+
+$breakpoint-tablet-portrait {
+	.box h2 { font-size: 32px; }
+}
+
+/* Mobile */
+
+$breakpoint-mobile {
+	.box h2 { font-size: 28px; }
+	
+	.box .box__image { margin-bottom: 20px; }
+
+	.box .box__meta { margin-bottom: 15px; }
+}
+
+@media(max-width: 560px){
+	.box h2 { font-size: 24px; }
+}

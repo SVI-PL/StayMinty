@@ -1,0 +1,96 @@
+/* ------------------------------------------------------------ *\
+	Richtext Entry
+\* ------------------------------------------------------------ */
+
+.richtext-entry > ul:not([class]),
+.richtext-entry > ol:not([class]) { padding-left: 20px; }
+
+.richtext-entry > ul:not([class]) ol,
+.richtext-entry > ul:not([class]) ul,
+.richtext-entry > ol:not([class]) ol,
+.richtext-entry > ol:not([class]) ul { padding-left: 30px; }
+
+.richtext-entry > blockquote { border-left: 2px solid $c-base; margin-left: 0; padding: 0 0 0 16px; }
+
+.richtext-entry a:not([class]) { text-decoration: none; }
+.richtext-entry a:not([class]):hover { opacity: .65; color: inherit; }
+
+/*
+ * Unset nested content selector styles
+ * - Prevents layout styles from cascading too deeply
+ * - helps with plugin compatibility
+ */
+.richtext-entry > .richtext-entry { margin: inherit; max-width: inherit; padding: inherit; }
+
+/* Blocks */
+.richtext-entry > *.alignwide { width: 100%; max-width: 100%; clear: both; }
+.richtext-entry > *.aligncenter { margin-left: auto; margin-right: auto; }
+.richtext-entry > *.alignfull { margin-left: calc(50% - 50vw); margin-right: calc(50% - 50vw); width: auto; }
+
+.richtext-entry { font-size: 18px; line-height: 1.45; letter-spacing: 0.033em; }
+
+.richtext-entry h1 { font-size: 42px; }
+.richtext-entry h2 { font-size: 36px; }
+.richtext-entry h3 { font-size: 30px; }
+.richtext-entry h4 { font-size: 26px; }
+.richtext-entry h5 { font-size: 22px; }
+.richtext-entry h6 { font-size: 20px; font-family: $f-libre; /*letter-spacing: 0.05em;*/ letter-spacing: 0.012em; }
+
+.richtext-entry h1,
+.richtext-entry h2,
+.richtext-entry h3,
+.richtext-entry h4,
+.richtext-entry h5 { font-family: $f-league; letter-spacing: 0.01em; line-height: 1.2; }
+
+.richtext-entry h2 + h6 { margin-top: -11px; margin-bottom: 23px; }
+.richtext-entry h1 + h6 { margin-top: -19px; margin-bottom: 15px; }
+
+.richtext-entry .btn { padding: 11px 15px; font-family: $f-league; font-size: 17px; border: 2px solid $c-green-2; display: block; max-width: 206px; margin-top: 31px; }
+.richtext-entry .btn:hover { background: $c-green-2; }
+
+.richtext-entry blockquote { padding: 10px 0 10px 15px; border-left: 2px solid $c-green-2; font-style: italic; }
+
+.richtext-entry hr { max-width: 100%; max-width: 100%; background: $c-base; }
+
+/* Tablet Portrait */
+
+$breakpoint-tablet-portrait {
+	.richtext-entry h1 { font-size: 35px; }
+	.richtext-entry h2 { font-size: 32px; }
+	.richtext-entry h3 { font-size: 28px; }
+	.richtext-entry h4 { font-size: 24px; }
+	.richtext-entry h5 { font-size: 20px; }
+	.richtext-entry h6 { font-size: 18px; }
+
+	.richtext-entry .btn { font-size: 16px; padding: 10px 20px; }
+}
+
+
+/* Mobile */
+
+$breakpoint-mobile {
+	.richtext-entry h1 { font-size: 30px; }
+	.richtext-entry h2 { font-size: 28px; }
+	.richtext-entry h3 { font-size: 26px; }
+	.richtext-entry h4 { font-size: 22px; }
+
+	.richtext-entry .btn { padding: 8px 15px; }
+
+	.richtext-entry h2 + h6 { margin-top: -5px; margin-bottom: 20px; }
+	.richtext-entry h1 + h6 { margin-top: -10px; margin-bottom: 15px; }
+
+	.richtext-entry { font-size: 17px; }
+}
+
+/* Mobile Portrait */
+
+$breakpoint-mobile-portrait {
+	.richtext-entry { font-size: 16px; }
+
+	.richtext-entry h1 { font-size: 25px; }
+	.richtext-entry h2 { font-size: 22px; }
+	.richtext-entry h3 { font-size: 20px; }
+	.richtext-entry h4 { font-size: 18px; }
+	.richtext-entry h5 { font-size: 17px; }
+	.richtext-entry h6 { font-size: 16px; }
+}

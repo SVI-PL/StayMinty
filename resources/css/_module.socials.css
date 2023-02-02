@@ -1,0 +1,12 @@
+/* ------------------------------------------------------------ *\
+	Socials	
+\* ------------------------------------------------------------ */
+
+.socials { list-style-type: none; display: flex; align-items: center; }
+.socials li + li { margin-left: 26px; }
+.socials a { display: block; transition: .3s; }
+
+.socials--secondary svg { height: 27px; }
+
+.socials--secondary svg,
+.socials--secondary img { max-width: 25px; transition: .3s; }

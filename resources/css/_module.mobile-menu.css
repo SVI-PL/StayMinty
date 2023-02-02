@@ -1,0 +1,72 @@
+/* ------------------------------------------------------------ *\
+	Mobile Menu
+\* ------------------------------------------------------------ */
+
+.mobile-menu { background-color: $c-green; box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12); color: #424242; display: flex; flex-wrap: wrap; /*height: 100vh;*/ overflow-x: hidden; overflow-y: auto; position: fixed; top: 0; bottom: 0; transform-style: preserve-3d; transition: transform .35s cubic-bezier(.4,0,.2,1); will-change: transform; min-width: 200px; padding: 60px 50px 20px; width: 100vw; max-width: 400px; background: linear-gradient(134.18deg,$c-green,$c-green); z-index: 1000; overflow: hidden; color: $c-base; left: 0; transform: translateX(-100%); overflow: auto; }
+
+.mobile-menu .mobile-menu--body { width: 100%; }
+
+.mobile-menu--active { transform: translateX(0); transition-delay: .07s; left: 0; }
+
+/* ------------------------------------------------------------ *\
+	Mobile Menu Head
+\* ------------------------------------------------------------ */
+
+.mobile-menu .mobile-menu__head { width: 100%; display: flex; justify-content: space-between; margin-bottom: 20px; }
+
+/* ------------------------------------------------------------ *\
+	Mobile Menu Body
+\* ------------------------------------------------------------ */
+
+.mobile-menu .nav { border-top: 2px solid #fff; border-bottom: 2px solid #fff; column-count: 2; padding: 10px 0; }
+.mobile-menu .nav a { color: $c-base; font-size: 18px; font-weight: 500; }
+.mobile-menu .nav li { overflow: hidden; }
+.mobile-menu .nav ul li:hover > a { color: $c-white; }
+.mobile-menu .nav li + li { margin-top: 10px; }
+.mobile-menu .nav .menu-item-has-children:hover ul { max-height: 1000px; visibility: visible; opacity: 1; }
+
+.mobile-menu .nav ul ul { min-width: 0; max-height: 0; visibility: hidden; transition: all .3s ease-in-out; background: #f4f4f4; }
+.mobile-menu .nav ul ul li { padding: 5px 10px; }
+.mobile-menu .nav ul ul li:hover a { color: $c-green; }
+.mobile-menu .nav ul ul a { color: $c-base; }
+
+@media (-ms-high-contrast: none), (-ms-high-contrast: active), (-moz-touch-enabled: 0), (hover) {
+ 	.mobile-menu .nav .menu-item-has-children:hover .sub-menu { max-height: 1000px; visibility: visible; opacity: 1; }
+}
+
+
+.mobile-menu .nav + .nav { margin-top: 10px; }
+.mobile-menu .nav--secondary { border: none; column-count: 1; text-transform: uppercase; }
+
+.mobile-menu .socials svg { color: $c-base; height: 20px; }
+.mobile-menu .socials li + li { margin-left: 20px; }
+.mobile-menu .socials li:hover a { opacity: .65; }
+
+/* ------------------------------------------------------------ *\
+	Mobile Menu Foot
+\* ------------------------------------------------------------ */
+
+.mobile-menu__foot { width: 100%; font-size: 14px; padding: 20px 0; }
+
+.mobile-menu .copyright { width: 100%; margin-top: auto; font-size: 12px; }
+
+.overlay { opacity: .6; pointer-events: all; }
+.overlay .overlay--active { background-color: #000; bottom: 0; height: 100vh; left: 0; opacity: 0; pointer-events: none; position: fixed; top: 0; transition: opacity .35s cubic-bezier(.4,0,.2,1); width: 100vw; }
+
+/* ------------------------------------------------------------ *\
+	Page Template Inner
+\* ------------------------------------------------------------ */
+
+.mobile-menu--alt { background: $c-green-2; padding: 60px 20px; }
+
+.mobile-menu--alt .nav-trigger { display: block; }
+.mobile-menu--alt .nav-trigger:hover span { background: $c-base; }
+
+.mobile-menu--alt .nav-actions ul { display: block; }
+.mobile-menu--alt .nav-actions li + li { margin: 10px 0 0 0; }
+
+.mobile-menu--alt .nav-main { margin-bottom: 20px; }
+.mobile-menu--alt .nav-main > ul { display: block; margin: 0; }
+
+.mobile-menu--alt .nav-actions .btn { background: $c-white; border-color: $c-base; color: $c-base; min-width: 170px; }
+.mobile-menu--alt .nav-actions .btn:hover { background: $c-green-2; }

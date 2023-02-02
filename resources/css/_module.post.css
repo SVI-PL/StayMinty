@@ -1,0 +1,59 @@
+/* ------------------------------------------------------------ *\
+	Post	
+\* ------------------------------------------------------------ */
+
+.post { display: flex; justify-content: space-between; }
+.post + .post { margin-top: 114px; }
+
+.post .post__aside { margin-right: -140px; }
+.post .post__aside img { width: 100%; height: auto; }
+.post .post__content { max-width: 50%; flex: 1 0 50%; display: flex; flex-direction: column; justify-content: center; }
+
+.post .post__content h4 { padding-bottom: 23px; margin-bottom: 22px; position: relative; letter-spacing: 0.007em; }
+.post .post__content h4:after { position: absolute; content: ''; width: 135px; height: 2px; background: $c-base; left: 0; bottom: 0; }
+.post .post__content p { line-height: 1.5; letter-spacing: 0.041em; }
+
+/* ------------------------------------------------------------ *\
+	Post Reversed
+\* ------------------------------------------------------------ */
+
+.post--reversed { flex-direction: row-reverse; }
+.post--reversed .post__aside { margin-left: -140px; margin-right: initial; justify-content: flex-end; }
+
+/* Responsive */
+
+
+$breakpoint-small-desktop {
+	.post .post__content { padding-right: 30px; }
+
+	.post--reversed .post__content { padding-left: 30px; padding-right: 0; }
+}
+
+/* Tablet Portrait */
+
+$breakpoint-tablet-portrait {
+	.post + .post { margin-top: 80px; }	
+	.post .post__aside { margin: 0 -200px 0 0; }
+	.post--reversed .post__aside { margin: 0 0 0 -200px; margin-left: initial; }
+}
+
+/* Mobile */
+
+$breakpoint-mobile {
+	.post .post__content,
+	.post--reversed .post__content { padding: 0 0 0 20px; max-width: 100%; flex: 1 1 100%; }
+
+	.post .post__aside { order: 1; margin: 0 0 20px; }
+	.post .post__content { order: 2; }
+
+	.post { flex-direction: column; }
+	.post + .post { margin-top: 50px; }
+}
+
+$breakpoint-mobile-portrait {
+	
+	.post .post__content,
+	.post--reversed .post__content { padding: 0; }
+
+	.post + .post { margin-top: 35px; }
+}

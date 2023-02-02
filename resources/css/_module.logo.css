@@ -1,0 +1,15 @@
+/* ------------------------------------------------------------ *\
+	Logo
+\* ------------------------------------------------------------ */
+
+.logo { display: block; width: 156px; height: 40px; background-size: cover; background-position: center center; background-repeat: no-repeat; white-space: nowrap; text-indent: 100%; overflow: hidden; }
+.logo--large { width: 280px; background-size: contain; }
+
+
+$breakpoint-tablet-portrait {
+	.logo.logo--large { top: 20px; }
+}
+
+$breakpoint-mobile {
+	.logo.logo--large { width: 200px; }
+}

@@ -1,0 +1,36 @@
+/* ------------------------------------------------------------ *\
+	Cards
+\* ------------------------------------------------------------ */
+
+.card { box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.3); min-height: 445px; padding: 63px 47px 42px; background: #f0f0f0; width: 100%; }
+.card h5 { line-height: 1; letter-spacing: 0.008em; margin-bottom: 56px; }
+.card .card__entry { padding-left: 10px;  }
+
+.card--secondary { padding: 42px 47px 20px; background: $c-green; color: $c-white; }
+.card--secondary h5 { margin-bottom: 40px; }
+.card--secondary .card__entry { padding-left: 19px; }
+
+.card .list-info li { font-size: 20px; padding-left: 31px; }
+.card .list-info li + li { margin-top: 9px; }
+.card .list-info img { height: 29px; top: 0; }
+
+/* Responsive */
+
+/* Tablet Portrait */
+
+$breakpoint-tablet-portrait {
+	.card,
+	.card--secondary { padding: 35px 25px 35px; min-height: 350px; }
+	.card h5 { margin-bottom: 36px; }
+
+	.card .list-info li { font-size: inherit;  }
+}
+
+/* Mobile */
+
+$breakpoint-mobile {
+	.card,
+	.card--secondary { padding: 25px 15px 25px; min-height: 250px; }	
+
+	.card h5 { margin-bottom: 26px; }
+}

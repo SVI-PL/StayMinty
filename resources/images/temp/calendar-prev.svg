@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>icon/arrow/left/white</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="icon/arrow/left/white" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M35.8694552,19.1423922 L22.2393738,5.80181808 C21.90476,5.47431156 21.8989984,4.93755697 22.2265049,4.60294315 C22.5540114,4.26832933 23.090766,4.26256772 23.4253798,4.59007424 L38.5507003,19.3941281 C38.8904048,19.7266172 38.8904048,20.2733828 38.5507003,20.6058719 L23.4253798,35.4099258 C23.090766,35.7374323 22.5540114,35.7316707 22.2265049,35.3970569 C21.8989984,35.062443 21.90476,34.5256884 22.2393738,34.1981819 L35.8895344,20.8379551 L1.22278143,20.8379551 C0.754564674,20.8379551 0.375,20.4583904 0.375,19.9901736 C0.375,19.5219569 0.754564674,19.1423922 1.22278143,19.1423922 L35.8694552,19.1423922 Z" id="Combined-Shape" fill="#000" fill-rule="nonzero" transform="translate(19.590239, 20.000000) scale(-1, 1) translate(-19.590239, -20.000000) "></path>
+    </g>
+</svg>

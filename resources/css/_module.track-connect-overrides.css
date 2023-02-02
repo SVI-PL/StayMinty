@@ -1,0 +1,187 @@
+.search-wrapper { display: flex; align-items: flex-start; box-sizing: border-box; padding-top: 60px; }
+
+.search-wrapper .sidebar--listing { width: 350px; padding: 35px; background-color: $c-white; flex-shrink: 0; margin-right: 75px; box-shadow: 0px 0px 21px 0px rgba(0, 0, 0, 0.15); }
+
+#track-widget h3.widget-title,
+#track-widget h2 { font-family: $f-league; margin-top: 0; margin-bottom: 20px; padding: 0; border-bottom: none; font-size: 24px; letter-spacing: .001em; font-weight: bold; color: #010101; }
+.section-form #track-widget h2 { display: none; }
+#track-widget br { display: none; }
+#track-widget form span,
+#track-widget form span strong,
+#track-widget form span b,
+#track-widget form label { display: block; font-weight: normal; font-size: 20px; letter-spacing: .05em; text-transform: uppercase; color: $c-grey; margin-top: 17px; margin-bottom: 14px; }
+#track-widget form .input-daterange input { text-align: left; }
+
+#track-widget form input[type="text"],
+#track-widget form select { width: 100%; height: 50px; border: 1px solid $c-grey; border-radius: 3px; padding: 0 20px; font-weight: bold; font-size: 16px; color: $c-grey; }
+#track-widget form select { appearance: none; padding-right: 40px; }
+#track-widget .select-holder { position: relative; }
+#track-widget .select-holder:after { content: ''; position: absolute; right: 15px; top: 19px; width: 10px; height: 10px; border: solid $c-grey; border-width: 0 1px 1px 0; transform: rotate(45deg); pointer-events: none; }
+
+#track-widget form input[type="text"]#amount,
+#track-widget form input[type="text"]#slider-beds { height: auto; color: $c-grey !important; margin-bottom: 15px; letter-spacing: .05em; text-transform: uppercase; font-family: $f-league; }
+#track-widget form input[type="text"]#amount { font-size: 20px; }
+
+#track-widget .ui-widget-header { background: #969696; border: none; border-radius: 2px; }
+#track-widget form .ui-slider-handle { margin: 0; background: #b3b3b3; top: -4px; transform: translateX(-50%); }
+
+#track-widget form .btn-search { margin-top: 35px; text-align: center; }
+
+#track-widget form .searchsubmit { padding: 0 15px; border: 2px solid $c-green-2; appearance: none; border-radius: 2px; background: $c-green-2; min-width: 275px; height: 50px; text-align: center; line-height: 48px; font-family: $f-league; transition: background .3s; }
+#track-widget form .searchsubmit:hover { background: transparent; }
+#track-widget form .searchsubmit i { display: none; }
+#track-widget form .searchsubmit span { margin: 0; display: inline-block; font-size: 16px; font-weight: bold; letter-spacing: .06em; text-transform: uppercase; color: #000; }
+
+#track-widget .extra-persons-box { display: flex; align-items: flex-start; margin: 0 -20px; }
+#track-widget .extra-person-box { width: 50%; padding: 0 20px; white-space: initial; }
+
+.search-wrapper .content--listing .listing-box { height: auto; padding: 0; float: none; margin-bottom: 70px; display: flex; align-items: flex-start; }
+
+.search-wrapper .content--listing .listing-wrap { display: flex; align-items: flex-start; }
+
+.search-wrapper .content--listing .listing-widget-thumb { width: 290px; max-width: 100%; flex-shrink: 0; margin-right: 44px; }
+
+.search-wrapper .content--listing .listing-widget-details { padding-top: 22px; margin-top: 0; width: auto; flex: 1; color: $c-grey; letter-spacing: .01em; }
+
+.search-wrapper .content--listing .listing-widget-details h3.listing-title { padding: 0; margin-top: 0; font-size: 24px; padding-left: 0 !important; }
+.search-wrapper .content--listing .listing-widget-details h3.listing-title a { font-size: 24px; font-family: $f-league; font-weight: bold; color: #010101; text-decoration: none; }
+.search-wrapper .content--listing .listing-widget-details h3.listing-title a:hover { opacity: .8; }
+
+.search-wrapper .content--listing .listing-widget-details .listing-information { padding-left: 0; font-weight: bold; font-family: $f-league; font-size: 22px; line-height: 1.2; }
+.search-wrapper .content--listing .listing-widget-details .listing-overview { padding-left: 0; font-size: 16px; line-height: 1.2; }
+.search-wrapper .content--listing .archive-listing-navigation .page-numbers { font-size: 16px; font-family: $f-league; }
+.search-wrapper .content--listing .archive-listing-navigation .page-numbers:hover,
+.search-wrapper .content--listing .archive-listing-navigation .page-numbers.current { border-top: 5px solid $c-green; }
+
+.search-wrapper .content--listing .location__map .map__holder { min-height: 430px; width: 100%; }
+.search-wrapper .content--listing .section-map h3 { font-weight: 700; font-size: 32px; margin-bottom: 10px; }
+.search-wrapper .content--listing .section-map a { color: #000; font-weight: 700; }
+
+@media(max-width: 1200px) {
+	.search-wrapper .sidebar--listing { width: 300px; padding: 30px; margin-right: 40px; }
+	#track-widget form .searchsubmit { min-width: 1px; }
+}
+
+@media(max-width: 1023px) {
+	.search-wrapper .content--listing .listing-wrap,
+	.search-wrapper .content--listing .listing-box { flex-direction: column; }
+	.search-wrapper .content--listing .listing-widget-thumb { margin-right: 0; }
+	.search-wrapper .content--listing .listing-widget-details .listing-information { font-size: 18px; }
+
+}
+
+@media(max-width: 550px) {
+	.search-wrapper { flex-direction: column; }
+	.search-wrapper .sidebar--listing { width: 100%; margin-bottom: 60px; }
+	.search-wrapper .content--listing { width: 100%; }
+	.search-wrapper .content--listing .listing-wrap,
+	.search-wrapper .content--listing .listing-widget-thumb { width: 100%; max-width: 100%; text-align: center; }
+	.search-wrapper .content--listing .listing-widget-thumb img { width: 100%; }
+	.search-wrapper .content--listing .listing-box { margin-bottom: 50px; }
+	.search-wrapper .content--listing .location__map .map__holder { min-height: 290px; }
+}
+
+/* ------------------------------------------------------------ *\
+	Intro Inner
+\* ------------------------------------------------------------ */
+
+.intro-inner--listing { margin-top: 20px; }
+.intro-inner--listing-margin { margin-top: 80px; }
+.intro-inner--listing .intro__background:before { content: ''; position: absolute; left: 0; top: 0; width: 100%; height: 100%; background: rgba(199,255,217,.8); }
+
+/* ------------------------------------------------------------ *\
+	Seach Single Article
+\* ------------------------------------------------------------ */
+
+.search-single { padding-top: 130px; }
+.search-single #track-widget h2 { display: none; }
+.search-single .content--listing .entry-title { margin-top: 0; margin-bottom: 30px; font-size: 28px; line-height: 1.18; font-family: $f-league; letter-spacing: .01em; font-weight: bold; }
+.search-single .content--listing .listing-wrapper { margin: 0; }
+.search-single .wplistings-single-listing .listing-meta { font-family: $f-league; font-weight: bold; }
+.search-single .wplistings-single-listing .listing-meta li { padding-top: 15px; }
+.search-single .wplistings-single-listing .listing-meta li.listing-price { background: $c-green-2; color: #000; }
+.search-single .wplistings-single-listing .thumb-box { margin-top: 0; margin-left: 0; }
+.search-single .wplistings-single-listing .thumb-box .thumbs li img.active { border-color: #52c1b5; }
+.search-single .wplistings-single-listing .thumbs { display: flex; flex-wrap: wrap; margin: 0 -20px; }
+.search-single .wplistings-single-listing .thumbs li { width: 12.5%; padding: 0 20px; margin-bottom: 7px; }
+.search-single .wplistings-single-listing .sy-controls li a:after { background-image: url(../images/arrows.svg); }
+
+@media(max-width: 1200px) {
+	.search-single .wplistings-single-listing .thumbs { margin: 0 -15px; }
+	.search-single .wplistings-single-listing .thumbs li { width: 16.666%; padding: 0 15px; }
+
+}
+
+@media(max-width: 800px) {
+	.search-single .search-wrapper { padding-top: 0; }
+	.search-single .slide_wrapper { margin: 0; }
+	.search-single .wplistings-single-listing .thumbs li { width: 20%; }
+
+}
+
+@media(max-width: 767px) {
+	.search-single .search-wrapper { flex-direction: column; }
+	.search-single .search-wrapper .sidebar--listing { width: 100%; margin-bottom: 60px; }
+	.search-single .search-wrapper .content--listing { width: 100%; }
+}
+
+@media(max-width: 500px){
+	.search-single .wplistings-single-listing .thumbs li { width: 25%; }
+}
+
+/* ------------------------------------------------------------ *\
+	Listing Tabs
+\* ------------------------------------------------------------ */
+
+#listing-tabs { margin-top: 85px; border: none; padding: 0; }
+#listing-tabs .ui-widget-header { background: transparent; border: none; }
+#listing-tabs .ui-tabs-nav li a { background: #f0f0f0 !important; color: #000 !important; border-radius: 0 !important; font-family: $f-league; font-weight: bold; font-size: 15px; letter-spacing: .01em; }
+#listing-tabs .ui-tabs-nav li.ui-tabs-active a  { background: #fff !important; border: solid $c-grey; border-width: 2px 2px 0 2px; }
+.search-single .wplistings-single-listing .ui-tabs .ui-tabs-panel { font-size: 16px; line-height: 1.63; letter-spacing: 0.01em; }
+.search-single .wplistings-single-listing .ui-tabs .ui-tabs-panel { border: 2px solid $c-grey; }
+
+@media(max-width: 500px){
+	#listing-tabs { margin-top: 40px; }
+}
+
+/* ------------------------------------------------------------ *\
+	Intro Form Styles Override
+\* ------------------------------------------------------------ */
+
+.intro #track-widget h2 { display: none; }
+.intro #track-widget .hide-home { display: none; }
+.intro #track-widget .select-holder:after { border-width: 0 2px 2px 0; right: 0; }
+.intro #track-widget form span,
+.intro #track-widget form span strong,
+.intro #track-widget form span b,
+.intro #track-widget form label { margin-bottom: 6px; font-size: 16px; }
+.intro #track-widget form input[type="text"],
+.intro #track-widget form select { border-radius: 0; border-width: 0 0 2px 0; font-weight: normal; padding-left: 0; }
+.intro #track-widget .input-daterange { display: flex; padding-top: 22px; justify-content: space-between; }
+.intro #track-widget .datepicker-entry { width: 259px; position: relative; }
+.intro #track-widget .datepicker-entry input { padding-right: 30px; font-size: 18px; }
+.intro #track-widget .datepicker-entry:after { content: "\f073"; font-family: 'FontAwesome'; font-size: 15px; position: absolute; right: 0; bottom: 15px; }
+.intro #track-widget form .btn-search { text-align: left; }
+
+@media (max-width: 1165px) {
+	.intro #track-widget .datepicker-entry { width: 45%; }
+}
+
+@media (max-width: 970px) {
+	.intro #track-widget form .btn-search { text-align: center; }
+}
+
+@media (max-width: 767px) {
+	.intro #track-widget .datepicker-entry input { font-size: 13px; }
+}
+
+/* ------------------------------------------------------------ *\
+	Alt Form
+\* ------------------------------------------------------------ */
+
+#track-widget .form-book--alt form input[type="text"],
+#track-widget .form-book--alt form select { padding: 9px 10px 8px 0px; border: none; font-size: 22px; font-family: 'League Spartan', Helvetica, sans-serif; border-bottom: 2px solid #7b7b7b; appearance: none; background: transparent;  border-radius: 0; }
+
+#track-widget .form-book--alt form input[type="text"],
+ #track-widget .form-book--alt form select.form__field--alt { font-size: 14px; }
+.datepicker>div.datepicker-days { display: block !important; }

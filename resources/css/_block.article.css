@@ -1,0 +1,144 @@
+/* ------------------------------------------------------------ *\
+	Articles
+\* ------------------------------------------------------------ */
+
+.articles { padding: 0 20px; margin-bottom: 55px; transition: opacity .3s; }
+.articles > ul > li + li { margin-top: 55px; }
+
+body.loading .articles { opacity: 0.5; pointer-events: none; }
+
+/* ------------------------------------------------------------ *\
+	Responsive
+\* ------------------------------------------------------------ */
+
+@media(max-width: 560px){
+	.articles { padding: 0; margin-bottom: 35px; }
+}
+
+/* ------------------------------------------------------------ *\
+	Article
+\* ------------------------------------------------------------ */
+
+.article { display: flex; flex-wrap: wrap; align-items: flex-start; }
+
+.article .article__content { display: flex; flex-direction: column; align-items: flex-start; width: 55%; padding-left: 62px; padding-top: 40px; padding-bottom: 35px; }
+.article .article__content .link-more { margin-top: auto; }
+
+.article .article__image { position: relative; width: 45%; padding: 18px 0 18px 18px; }
+.article .article__image:before { content: ''; position: absolute; top: 0; bottom: 0; left: 0; z-index: -1; width: 69%; background-color: $c-green-2; }
+.article .article__image img { background-color: gray; width: 100%; }
+
+.article .article__meta,
+.article .article__title,
+.article .article__entry { width: 100%; }
+
+.article .article__meta { margin: 0 0 24px; font-style: italic; font-family: 'Libre Baskerville', 'Times New Roman', serif; letter-spacing: 0.02em; font-size: 20px; }
+
+.article .article__title { margin: 0; z-index: 10; font-size: 36px; line-height: 1.31; font-family: $f-league; }
+.article .article__title a { text-decoration: none; }
+
+.article .article__entry { margin-bottom: 30px; font-size: 18px; line-height: 1.67; }
+
+.articles > ul > li:nth-child(even) .article { flex-direction: row-reverse; }
+.articles > ul > li:nth-child(even) .article .article__image { padding: 18px; }
+.articles > ul > li:nth-child(even) .article .article__image:before { width: 100%; }
+.articles > ul > li:nth-child(even) .article .article__content { padding-left: 0; padding-right: 62px; }
+
+/* ------------------------------------------------------------ *\
+	Responsive
+\* ------------------------------------------------------------ */
+
+/* Tablet Portrait */
+
+$breakpoint-tablet-portrait {
+	.article .article__content { padding-left: 30px; }
+}
+
+/* Mobile */
+
+$breakpoint-mobile {
+	.article .article__image,
+	.article .article__content { width: 100%; }
+
+	.article .article__image { padding: 18px 0 18px 18px; }
+
+	.article .article__content { padding-bottom: 0; padding-left: 0; }
+
+	.articles > ul > li:nth-child(even) .article .article__content { padding-right: 0; }
+}
+
+/* ------------------------------------------------------------ *\
+	Article Single
+\* ------------------------------------------------------------ */
+
+.article-single .shell { max-width: 953px; }
+
+.article-single .article__head { position: relative; padding-top: 107px; margin-bottom: 30px; }
+.article-single .article__head:before { content: ''; position: absolute; top: 0; left: 0; top: 0; width: 100%; height: 323px; background-color: $c-green-2; z-index: -1; }
+.article-single .article__head--no-image:before { content: none; }
+
+.article-single .article__image { position: relative; margin-bottom: 25px; }
+.article-single .article__image:before { content: ''; position: absolute; z-index: 10; top: -40px; right: -155px; background-image: url(../images/temp/ico-large-cross.png); width: 185px; height: 178px; background-repeat: no-repeat; background-position: center; background-size: contain; }
+.article-single .article__image img { width: 100%; }
+
+.article-single .article__date,
+.article-single .article__meta,
+.article-single .article__title { text-align: center; }
+
+.article-single .article__date span { position: relative; display: inline-block; padding: 0 50px 9px; font-family: $font-family-sans-serif--secondary; font-size: 22px; text-transform: uppercase; font-style: normal; font-weight: 500; }
+.article-single .article__date span:before { position: absolute; content: ''; height: 21px; bottom: 0; left: 0; width: 95%; background: $c-green-2; z-index: -1; }
+
+.article-single .article__title { font-family: $f-league; font-weight: 700; font-size: 52px; line-height: 1.31; }
+
+.article-single .article__meta { font-family: $f-libre; font-size: 13px; line-height: 1.16; }
+.article-single .article__meta a { text-decoration: none; color: inherit; }
+.article-single .article__meta a:hover { color: $c-green; }
+
+.article-single .article__entry { font-size: 16px; line-height: 1.31; letter-spacing: 0.02em; }
+.article-single .article__entry img { margin-bottom: 30px; }
+.article-single .article__entry h2 { margin: 35px 0; font-size: 42px; letter-spacing: 0.01em; line-height: 1.49; }
+.article-single .article__entry ul { list-style: disc; }
+.article-single .article__entry li + li { margin-top: 5px; }
+.article-single .article__entry .btn { display: inline-block; padding: 13px 44px; margin: 22px 0; max-width: 100%; font-weight: 700; font-family: $font-family-sans-serif--secondary; letter-spacing: 0.08em; }
+.article-single .article__entry .btn:hover { background: rgba(255,255,255, 0.8); color: $c-base; }
+.article-single .article__entry a:not(.btn) { font-style: italic; border-bottom: 1px solid $c-green-2; display: inline-block; color: inherit; }
+
+/* ------------------------------------------------------------ *\
+	Responsive
+\* ------------------------------------------------------------ */
+
+/* Small Desktop */
+
+$breakpoint-small-desktop {
+	.article-single .article__image:before { width: 145px; height: 140px; right: -105px; }
+}
+
+/* Tablet Portrait */
+
+$breakpoint-tablet-portrait {
+	.article-single .article__head { padding-top: 80px; }
+	
+	.article-single .article__image:before { width: 100px; height: 96px; right: -10px; }
+
+	.article-single .article__entry .btn { margin: 10px 0; }
+}
+
+/* Mobile */
+
+$breakpoint-mobile {
+	.article-single .article__head { padding-top: 60px; }
+
+	.article-single .article__date span { padding-left: 25px; padding-right: 25px; font-size: 20px; }
+	
+	.article-single .article__title	{ font-size: 34px; }
+
+	.article-single .article__entry h2 { font-size: 32px; margin: 25px 0; }
+}
+
+@media(max-width: 520px){
+	.article-single .article__head:before { height: 220px; }
+}
+
+@media(max-width: 430px){
+	.article-single .article__head:before { height: 160px; }
+}

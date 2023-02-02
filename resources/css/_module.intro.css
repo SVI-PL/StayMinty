@@ -1,0 +1,85 @@
+/* ------------------------------------------------------------ *\
+	Intro	
+\* ------------------------------------------------------------ */
+
+.intro { padding: 72px 0 31px; min-height: 772px; position: relative; }
+.intro .intro__inner { display: flex; justify-content: space-between; flex-wrap: wrap; }
+
+
+.intro .intro__image { width: 50%; border-right: 15px solid $c-green; min-height: 87%; background-size: cover; background-position: center center; box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.29); position: absolute; right: 0; }
+
+/* Intro Content */
+
+.intro .intro__content { flex: 1 1 50%; max-width: 50%; padding: 145px 0 110px; position: relative; }
+.intro .intro__content h1 { line-height: 1.18; letter-spacing: 0.007em; margin-bottom: 39px; }
+.intro .intro__content-image { position: absolute; bottom: -170px; left: -130px; width: 200px; height: 170px; background-size: contain; background-repeat: no-repeat; background-position: center center; }
+
+@media ( max-width: 1300px ) {
+	/*.intro .intro__content-image { left: -100px; bottom: -140px; }*/
+}
+
+@media ( max-width: 1165px ) {
+	.intro .intro__content { padding-right: 15px; }
+	.intro .intro__content h1 { margin-left: 0; }
+}
+
+@media ( max-width: 970px ) {
+	.intro { min-height: 600px; }
+	.intro .shell { padding: 0; }
+	.intro .intro__inner { justify-content: center; }
+	.intro .intro__content { position: relative; z-index: 1; flex: 1 1 100%; max-width: 100%; display: flex; flex-direction: column; padding-right: 0; padding: 40px 10px 40px; order: 2; }
+	.intro .intro__content .form-book { order: 2; padding: 20px; background: $c-white; min-width: 80%; flex: 1 1 80%; align-self: center; }
+	.intro .intro__content h1 { order: 1; margin: 0 0 20px 20px; }
+	.intro .intro__content .form__actions { text-align: center; }
+	.intro .intro__image { position: static; max-width: 100%; width: 100%; z-index: 0; flex: 1 1 100%; margin: 0 -15px; order: 1; min-height: 410px; }
+	.intro .intro__content-image { display: none; }
+}
+
+
+@media ( max-width: 812px ) {
+	.intro .intro__content .form-book { min-width: 100%; flex: 1 1 100%; }
+}
+
+/* ------------------------------------------------------------ *\
+	Intro Inner
+\* ------------------------------------------------------------ */
+
+.intro-inner { position: relative; }
+.intro-inner .intro__inner { position: relative; z-index: 2; }
+.intro-inner .intro__background { position: absolute; content: ''; width: 100%; height: 100%; top: 0; left: 0; @extend imageCover; z-index: 1; }
+
+.intro-inner .intro__body { padding: 130px 0 120px; text-align: center; max-width: 800px; margin: 0 auto; min-height: 458px; }
+
+.intro-inner .intro__body h6 { font-size: 33px; position: relative; display: inline-block; margin-bottom: 10px; padding: 0 80px; }
+.intro-inner .intro__body h6:before { position: absolute; content: ''; height: 21px; bottom: 0; left: 0; width: 95%; background: $c-green-2; z-index: -1; transition: width .3s; }
+
+.intro-inner .intro__body h1 { font-size: 64px; font-family: $f-league; line-height: 1.2; letter-spacing: 0.01em; }
+
+.intro-inner .intro__foot { position: relative; padding: 30px 0 18px; }
+.intro-inner .intro__foot:before { position: absolute; content: ''; left: 50%; top: 0; width: 100vw; height: 100%; margin-left: -50vw; z-index: 1; background: rgba(255, 255, 255, .9); box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.31); z-index: 1; }
+
+.intro-inner .intro__foot > * { position: relative; z-index: 2; }
+
+.intro-inner .form-book-inner { max-width: 1010px; margin: 0 auto; position: relative; left: 12px; }
+
+/* Small Desktop */
+
+$breakpoint-small-desktop {
+	.intro-inner .form-book-inner { left: 0; }
+}
+
+/* Tablet Portrait */
+
+$breakpoint-tablet-portrait {
+	.intro-inner .intro__body h6 { font-size: 30px; }
+	.intro-inner .intro__body h1 { font-size: 55px; }
+	.intro-inner .intro__foot { padding: 15px 0; }
+}
+
+/* Mobile */
+
+$breakpoint-mobile {
+	.intro-inner .intro__body { padding: 80px 0; min-height: auto; }
+	.intro-inner .intro__body h6 { font-size: 25px; margin-bottom: 20px; padding: 0 40px; }
+	.intro-inner .intro__body h1 { font-size: 40px; }
+}

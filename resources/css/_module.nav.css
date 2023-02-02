@@ -1,0 +1,98 @@
+/* ------------------------------------------------------------ *\
+	Nav
+\* ------------------------------------------------------------ */
+
+.nav li + li { margin-top: 19px; }
+.nav a { color: $c-base; text-decoration: none; font-size: 24px; font-family: $font-family-sans-serif--secondary; font-weight: 900; transition: .3s; }
+
+.nav--secondary li { min-width: 180px; }
+.nav--secondary li + li { margin-top: 7px; }
+.nav--secondary a { font-size: 16px; font-family: $font-family-sans-serif--secondary; font-weight: 600; }
+
+/* ------------------------------------------------------------ *\
+	Nav actions
+\* ------------------------------------------------------------ */
+
+.nav-actions ul { display: flex; align-items: center; }
+.nav-actions li + li { margin-left: 32px; }
+.nav-actions .btn { font-size: 18px; }
+
+/* ------------------------------------------------------------ *\
+	Nav Main
+\* ------------------------------------------------------------ */
+
+.nav-main > ul { display: flex; align-items: center; flex-wrap: wrap; margin: 0 -15px -5px; justify-content: center; }
+.nav-main > ul > li > a { font-family: $f-league; font-size: 16px; text-decoration: none; color: $c-base; text-transform: uppercase; letter-spacing: 0.03em; }
+
+.nav-main > ul > li { padding: 0 15px 5px; }
+
+/* Small Desktop */
+
+$breakpoint-small-desktop {
+	.nav-main > ul { margin: 0 -10px -5px; }
+	.nav-main > ul > li { padding: 0 10px 5px; }
+}
+
+@media(max-width: 1100px){
+	.nav-main > ul { margin: 0 -8px -5px; }
+	.nav-main > ul > li { padding: 0 8px 5px; }	
+}
+
+/* Mobile */
+
+$breakpoint-mobile {
+	.nav-main > ul { display: block; margin: 0; }
+	.nav-main > ul > li { padding: 0; }
+	.nav-main > ul > li + li { margin-top: 10px; }
+}
+
+/* ------------------------------------------------------------ *\
+	Nav Locations
+\* ------------------------------------------------------------ */
+
+.nav-locations { font-family: $f-league; font-size: 16px; color: $c-base; }
+.nav-locations > ul { column-count: 2; column-gap: 140px; }
+.nav-locations > ul > li { text-transform: uppercase; break-inside: avoid; }
+.nav-locations > ul > li a { text-decoration: none; text-transform: none; color: inherit; }
+
+.nav-locations a:hover { opacity: .65; }
+
+.nav-locations ul ul { margin: 24px 0; }
+.nav-locations ul ul li { margin-top: 16px; }
+
+/* Small Desktop */
+
+$breakpoint-small-desktop {
+	.nav-locations > ul { column-gap: 30px; }
+}
+
+/* ------------------------------------------------------------ *\
+	Nav Trigger
+\* ------------------------------------------------------------ */
+
+.nav-trigger { position: relative; display: inline-block; width: 40px; height: 26px; display: none; }
+.nav-trigger span { position: absolute; display: block; height: 2px; width: 100%; border-radius: 4px; background: #000; transition: top .2s .25s, opacity .2s .25s, transform .2s 0s; }
+
+.nav-trigger span:nth-child(1) { top: 0; }
+.nav-trigger span:nth-child(2) { top: 11px; }
+.nav-trigger span:nth-child(3) { top: 22px; }
+
+.nav-trigger--active:hover span { background: $c-white; }
+.nav-trigger--active span { transition: background .2s, top .2s, opacity .2s, transform .2s .25s; background: $c-base; }
+
+.nav-trigger--active span:nth-child(3),
+.nav-trigger--active span:nth-child(1) { top: 11px; }
+
+.nav-trigger--active span:nth-child(2) { opacity: 0; }
+.nav-trigger--active span:nth-child(1) { transform: rotate(45deg); }
+.nav-trigger--active span:nth-child(3) { transform: rotate(-45deg); }
+
+/* ------------------------------------------------------------ *\
+	Responsive
+\* ------------------------------------------------------------ */
+
+/* Mobile */
+
+$breakpoint-mobile {
+	.nav-trigger { display: block; }
+}

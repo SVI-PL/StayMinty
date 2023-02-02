@@ -1,0 +1,37 @@
+$font-family-sans-serif		: 'Rubik', Helvetica, sans-serif;
+$font-family-sans-serif--secondary : 'Work Sans', sans-serif;
+
+$font-family-serif			: Times, 'Times New Roman', serif;
+
+$f-league 					: 'League Spartan', Helvetica, sans-serif;
+$f-libre 					: 'Libre Baskerville', 'Times New Roman', serif;
+
+$font-size-base				: 22px;
+$line-height-base			: 1.31;
+
+$shell-max-width			: 1255px;
+$shell-gutter				: 15px;
+
+$c-green 					: #75baa0;
+$c-green-2 					: #c7ffd9;
+
+$c-white 					: #fff;
+$c-base 					: #000000;
+$c-grey						: #7b7b7b;
+$c-light-green              : #f0f0f0;
+
+$responsive-xxs				: 374px;
+$responsive-xs				: 768px;
+$responsive-admin-bar 		: 782px;
+$responsive-ios				: 812px;
+$responsive-sm				: 1023px;
+$responsive-md				: 1200px;
+$responsive-lg 				: 1400px;
+
+$breakpoint-mobile-portrait : @media (max-width: $responsive-xxs);
+$breakpoint-mobile			: @media (max-width: $responsive-xs), screen and (max-width: $responsive-ios) and (orientation: landscape);
+$breakpoint-admin-bar 		: @media (max-width: $responsive-admin-bar);
+$breakpoint-tablet-portrait	: @media (max-width: $responsive-sm);
+$breakpoint-small-desktop	: @media (max-width: $responsive-md);
+$breakpoint-large-desktop 	: @media (max-width: $responsive-lg);
+$retina						: @media (min-resolution: 2dppx);

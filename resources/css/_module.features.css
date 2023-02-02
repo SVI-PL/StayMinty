@@ -1,0 +1,26 @@
+/* ------------------------------------------------------------ *\
+	Section Features
+\* ------------------------------------------------------------ */
+
+.section-features { padding: 20px; }
+.section-features h2 { font-size: 42px; font-weight: 700; text-align: center; font-family: 'League Spartan'; }
+.section-features .features { display: flex; flex-wrap: wrap; justify-content: space-between; max-width: 1080px; margin: 0 auto 30px; }
+
+.section-features .features .feature .feature__title span { position: relative; }
+.section-features .features .feature .feature__title span:before { position: absolute; top: 6px; left: -15px; width: 11px; height: 11px; content: ''; background-image: url(../images/icon-features.png); background-size: cover; background-position: center; background-repeat: no-repeat; }
+
+.section-features .features .feature .feature__image img { display: block; margin: 0 auto; height: auto; }
+.section-features .features .feature .feature__title p { font-size: 18px; font-style: normal; font-weight: 700; font-family: 'League Spartan'; text-align: center; margin-bottom: 20px; position: relative; }
+.section-features .features .feature .feature__content span { font-size: 17px; font-style: italic; font-family: 'Libre Baskerville'; text-align: center; display: block; }
+
+.section-features .btn { display: table; margin: 0 auto; font-family: 'League Spartan'; font-size: 16px; padding: 13px 45px; }
+
+$breakpoint-tablet-portrait {
+	.section-features .features { justify-content: space-around; margin-bottom: 20px; }
+	.section-features .features .feature { max-width: 40%; flex: 1 1 40%; margin-bottom: 30px; }
+}
+
+$breakpoint-mobile {
+	.section-features .features { display: block; margin-bottom: 50px; }
+	.section-features .features .feature { max-width: 100%; }
+}

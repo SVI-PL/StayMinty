@@ -1,0 +1,12 @@
+/* ------------------------------------------------------------ *\
+	Link More
+\* ------------------------------------------------------------ */
+
+.link-more { position: relative; display: inline-block; padding: 0 33px 9px; font-size: 18px; font-family: $f-libre; font-style: italic; color: $c-base; text-decoration: none; transition: color .3s; }
+.link-more:before { position: absolute; content: ''; height: 21px; bottom: 0; left: 0; width: 95%; background: $c-green-2; z-index: -1; transition: width .3s; }
+
+.link-more:hover { color: $c-green; }
+.link-more:hover:before { width: 0; }
+
+/*link-more--alt*/
+.link-more--alt { padding-left: 44px; padding-right: 44px; font-family: $font-family-sans-serif--secondary; font-size: 22px; text-transform: uppercase; font-style: normal; font-weight: 500; }
